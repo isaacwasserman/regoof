@@ -51,7 +51,9 @@ jobs:
           mkdir -p /tmp/regoof-package
           npm pack --pack-destination /tmp/regoof-package
       - name: Verify npx package execution
-        run: npx --yes --package=/tmp/regoof-package/regoof-*.tgz regoof --help
+        run: |
+          TARBALL=$(ls /tmp/regoof-package/regoof-*.tgz)
+          npx --yes --package="$TARBALL" regoof --help
       - name: Verify bunx package execution
         run: |
           bun link
