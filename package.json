@@ -1,0 +1,45 @@
+{
+  "name": "regoof",
+  "version": "0.1.0",
+  "description": "TypeScript project refactoring tools",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isaacwasserman/regoof.git"
+  },
+  "homepage": "https://github.com/isaacwasserman/regoof#readme",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "bin": {
+    "regoof": "./dist/bin.js"
+  },
+  "files": ["dist", "README.md"],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "bun run scripts/build.ts",
+    "cli": "bun run src/bin.ts",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit",
+    "changeset": "changeset",
+    "prepack": "bun run build"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^26.4.1",
+    "@changesets/cli": "^2.30.0",
+    "typescript": "^7.0.2"
+  },
+  "peerDependencies": {
+    "typescript": "^7"
+  },
+  "dependencies": {
+    "@stricli/core": "^1.3.0",
+    "@speed-highlight/core": "^2.1.0",
+    "env-paths": "^4.0.0",
+    "minimatch": "^10.2.6",
+    "ts-morph": "^28.0.0"
+  }
+}
