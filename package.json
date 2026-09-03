@@ -1,6 +1,6 @@
 {
   "name": "regoof",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "TypeScript project refactoring tools",
   "repository": {
     "type": "git",
@@ -14,7 +14,10 @@
   "bin": {
     "regoof": "./dist/bin.js"
   },
-  "files": ["dist", "README.md"],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "engines": {
     "node": ">=18"
   },
